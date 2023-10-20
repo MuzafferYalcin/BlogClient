@@ -1,0 +1,14 @@
+ <div class="container main1">
+  <h2>Kayıt Ol</h2>
+    <form (ngSubmit)="register()">
+      <label for="name">Adınız:</label>
+      <input type="text" id="name" name="Name" [(ngModel)] ="modal.Name"><br>
+      <label for="email">E-posta Adresiniz:</label>
+      <input type="email" id="email" name="Email"[(ngModel)] ="modal.Email"><br>
+      <label for="username">Kullanıcı Adı:</label>
+      <input type="text" id="username" name="Username" [(ngModel)] ="modal.Username"><br>
+      <label for="password">Şifre:</label>
+      <input type="password" id="password" name="Password" [(ngModel)] ="modal.Password"><br>
+      <input type="submit" value="Kayıt Ol">
+    </form>
+</div>

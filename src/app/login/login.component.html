@@ -1,0 +1,10 @@
+<h2>Giriş Yapın</h2>
+    <form #form (ngSubmit)="Login()">
+      <label for="username">Email</label>
+      <input type="text" id="username" name="Email" [(ngModel)]="user.Email"><br>
+
+      <label for="password">Şifre</label>
+      <input type="password" id="password" name="Password" [(ngModel)]="user.Password"><br>
+
+      <input type="submit" value="Giriş Yap">
+    </form>

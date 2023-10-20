@@ -1,0 +1,20 @@
+<div class="blog-form my-5">
+  <h2 class="form-title">Write a Blog</h2>
+  <form #form="ngForm" (ngSubmit)="addBlog()" >
+    <label for="blog-title">Blog Title:</label>
+    <input type="text" id="blog-title" [(ngModel)]="blog.title" name="title">
+
+    <label for="imageUrl">ImageUrl:</label>
+    <input type="text" id="imageUrl" [(ngModel)] ="blog.imageUrl"  name="imageUrl">
+
+    <label for="blog-category">Category:</label>
+    <select id="blog-category" [(ngModel)] ="categorySelect" name="categorySelect">
+      <option [value]="category.name" *ngFor="let category of categories">{{category.name}} </option>
+    </select>
+
+    <label for="blog-content">Blog Content:</label>
+    <textarea id="blog-content" [(ngModel)]="blog.content" name="content" rows="10"></textarea>
+
+    <input type="submit" value="Submit" class="form-submit">
+  </form>
+</div>

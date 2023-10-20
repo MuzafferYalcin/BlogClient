@@ -1,0 +1,41 @@
+<div class="blog-page">
+
+  <div class="blog-content">
+    <img src="{{blog.imageUrl}}" alt="Blog Image">
+    <h2 class="blog-title">{{blog.title}}</h2>
+    <p class="blog-text">{{blog.content}}</p>
+  </div>
+  <div class="related-blogs">
+    <h3 class="related-title">Related Blogs</h3>
+    <ul class="related-list">
+      <li class="related-item"><a href="#">Related Blog 1</a></li>
+    </ul>
+  </div>
+</div>
+<div class="comments">
+  <h2 class="comment-title">Comments</h2>
+  <form>
+    <label for="comment-name">Name:</label>
+    <input type="text" id="comment-name" name="comment-name">
+
+    <label for="comment-content">Comment:</label>
+    <textarea id="comment-content" name="comment-content" rows="5"></textarea>
+
+    <input type="submit" value="Submit" class="comment-submit">
+  </form>
+
+  <div class="comment-list">
+    <div *ngFor="let yorum of yorums">
+      <div class="comment" >
+        <div class="comment-meta" >
+          <div class="comment-info">
+            <h3 class="comment-author">{{yorum.title}}</h3>
+          </div>
+        </div>
+        <p class="comment-text">{{yorum.content}}</p>
+      </div>
+    </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,18 @@
+<div class="navbar">
+  <a class="btn">Logo</a>
+  <div class="menu">
+    <a [routerLink]="['/']" class="btn">Home</a>
+    <a href="#" class="btn">Kategoriler</a>
+  </div>
+  <div *ngIf="!loggedIn()">
+      <a [routerLink]="['/register']" class="btn register ">Register</a>
+      <a [routerLink]="['/login']"  class="btn login">Login</a>
+  </div>
+  <div *ngIf="loggedIn()">
+    <a href="" class="btn ">{{authService.decodedToken.unique_name}} </a>
+    <a [routerLink]="['/writeblog']" class="btn ">write blog</a>
+    <a href="" (click)="logout()" class="btn">Logout</a>
+  </div>
+
+</div>
+

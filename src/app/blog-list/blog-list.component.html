@@ -1,0 +1,10 @@
+ <div class=" containerr">
+  <div class="cardd" *ngFor="let blog of blogs">
+    <img src="{{blog.imageUrl}}" alt="Blog Image">
+    <div class="cardd-content">
+      <h2 class="cardd-title">{{blog.title}}</h2>
+      <a [routerLink]="['/blog-details/', blog.id]"  class="btn btn-outline-success">Read More</a>
+    </div>
+  </div>
+</div>
+
